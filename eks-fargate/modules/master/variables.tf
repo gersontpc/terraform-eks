@@ -1,8 +1,3 @@
-variable "aws_profile" {
-  type        = string
-  description = "Defines your profile configured in ~.aws/configure"
-}
-
 variable "aws_region" {
   default     = "us-west-2"
   type        = string
@@ -24,3 +19,9 @@ variable "k8s_version" {
   type        = string
   description = "Kubernetes Desired Version"
 }
+
+variable "cluster_vpc" {}
+
+variable "private_subnet_a" {}
+
+variable "private_subnet_b" {}
