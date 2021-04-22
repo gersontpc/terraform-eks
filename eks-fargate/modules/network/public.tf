@@ -21,11 +21,11 @@ resource "aws_subnet" "public_subnet_b" {
 }
 
 resource "aws_route_table_association" "public_1a" {
-  subnet_id = aws_subnet.public_subnet_a.id
+  subnet_id      = aws_subnet.public_subnet_a.id
   route_table_id = aws_route_table.igw_route_table.id
 }
 
 resource "aws_route_table_association" "public_1b" {
-  subnet_id = aws_subnet.public_subnet_b.id
+  subnet_id      = aws_subnet.public_subnet_b.id
   route_table_id = aws_route_table.igw_route_table.id
 }
