@@ -15,7 +15,7 @@ variable "environment" {
 }
 
 variable "k8s_version" {
-  default     = "1.21"
+  default     = "1.18"
   type        = string
   description = "Kubernetes Desired Version"
 }

@@ -1,2 +1,1 @@
-aws_profile = "awsgerson"
-cluster_name = "LabEKSFargate"
+aws_profile  = "awsgerson"
