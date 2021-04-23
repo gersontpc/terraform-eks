@@ -6,3 +6,7 @@ variable "cluster_name" {
 variable "private_subnet_a" {}
 
 variable "private_subnet_b" {}
+
+variable "instance_type" {}
+
+variable "eks_cluster" {}

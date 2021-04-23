@@ -1,5 +1,5 @@
 resource "aws_eks_node_group" "nodes" {
-  cluster_name    = var.cluster_name.name
+  cluster_name    = var.eks_cluster.name
   node_group_name = format("%s-node-group", var.cluster_name)
   node_role_arn   = aws_iam_role.fargate_role.arn
   subnet_ids = [
@@ -13,7 +13,7 @@ resource "aws_eks_node_group" "nodes" {
     min_size     = 1
   }
 
-  instance_types = ["t2.micro"]
+  instance_types = var.instance_type
 
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSFargatePodExecutionRolePolicy,
