@@ -24,3 +24,5 @@ variable "k8s_version" {
   type        = string
   description = "Kubernetes Desired Version"
 }
+
+variable "instance_type" {}
