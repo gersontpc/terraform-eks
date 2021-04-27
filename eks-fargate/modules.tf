@@ -22,9 +22,10 @@ module "nodes" {
 
   cluster_name = var.cluster_name
 
-  instance_type = var.instance_type
+  eks_cluster = module.master.eks_cluster
 
-  eks_cluster      = module.master.eks_cluster
+  instance_type      = var.instance_type
+  auto_scale_options = var.auto_scale_options
 
   private_subnet_a = module.network.private_subnet_a
   private_subnet_b = module.network.private_subnet_b

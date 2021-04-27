@@ -25,4 +25,12 @@ variable "k8s_version" {
   description = "Kubernetes Desired Version"
 }
 
+variable "auto_scale_options" {
+  default = {
+    min     = 2
+    max     = 10
+    desired = 5
+  }
+}
+
 variable "instance_type" {}
